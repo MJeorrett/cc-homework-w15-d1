@@ -1,7 +1,7 @@
 class ShowsController < ApplicationController
 
   def index
-    render :json => "test"
+    render :json => Show.all
   end
 
   def create
