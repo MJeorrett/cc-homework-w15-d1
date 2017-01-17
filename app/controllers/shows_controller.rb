@@ -5,8 +5,8 @@ class ShowsController < ApplicationController
   end
 
   def create
-    @show = Show.create( show_params )
-    render :json => @show
+    show = Show.create( show_params )
+    render :json => show, status: :created
   end
 
   private
